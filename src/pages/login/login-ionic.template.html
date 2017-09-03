@@ -1,0 +1,15 @@
+<ion-content padding>
+  <form novalidate [formGroup]="login">
+    <div>
+      <h3>Please login to use this app</h3>
+      <p>User Name:</p>
+      <input type="text" name="username" formControlName="username"><br>
+      <span *ngIf="show_username_error" class="[ errors ]">Incorrect Username</span>
+      <p>Password:</p>
+      <input type="password" name="password" #password formControlName="password"><br>
+      <span *ngIf="show_password_error" class="[ errors ]">Incorrect Password</span>
+      <br>
+      <button type="submit" (click)="authenticateUser()">Login</button>
+    </div>
+  </form>
+</ion-content>
